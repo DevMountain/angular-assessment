@@ -5,7 +5,12 @@
     <title>Front End Assessment</title>
     <link rel="stylesheet" href="./styles/app.css">
 </head>
-<body>
+<body ng-controller = "homeCtrl" >
+
+
+
+
+
 <!--This div wraps the entire page-->
     <div class="site-wrapper">
         <!--Here is your header with the navigation nested inside -->
@@ -28,14 +33,34 @@
         <main class="site-main" role="main">
 
         <!--Views go here -->
+<ui-view></ui-view>
+
+
+
+
 
         </main>
         </div>
 
 
 <!--ADD ALL YOUR SCRIPTS HERE -->
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.1/angular-ui-router.min.js"></script>
+
+<script src = "https://ajax.googleapis.com/ajax/libs/angularjs/1.6.3/angular.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.4.2/angular-ui-router.js"></script>
+
+
+
+<script src = "./app.js"></script>
+
+<script src = "./controllers/aboutCtrl.js"></script>
+<script src = "./controllers/blogCtrl.js"></script>
+<script src = "./controllers/homeCtrl.js"></script>
+<script src = "./controllers/shopCtrl.js"></script>
+
+<script src = "./services/aboutService.js"></script>
+<script src = "./services/blogService.js"></script>
+<script src = "./services/homeService.js"></script>
+<script src = "./services/shopService.js"></script>
 
 </body>
 </html>
