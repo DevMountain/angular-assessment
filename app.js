@@ -30,9 +30,16 @@ var app = angular.module("assessment", ["ui.router"])
 	   controller: 'blogCtrl'
 	 })
 
+    // HOME STATE
+.state('home', {
+      url: '/',
+      templateUrl: './views/home.html',
+      controller: 'homeCtrl'
+    })
+
 
      // SHOP STATE
-	 .state('shop', {
+.state('shop', {
 	   url: '/shop',
 	   templateUrl: './views/shop.html',
 	   controller: 'shopCtrl'
