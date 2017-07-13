@@ -11,5 +11,8 @@ $scope.product_id = $stateParams.id
 
     // $scope.show = false;
 
-})
+});
+console.log('====================================');
+console.log($scope.product);
+console.log('====================================');
 

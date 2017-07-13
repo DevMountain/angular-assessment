@@ -6,7 +6,7 @@ angular.module("assessment")
         // VARIABLES
         // ============================================================
 
-
+log
         // FUNCTIONS
         // ============================================================
 shopService.getProducts().then(function(response){
