@@ -6,20 +6,17 @@ angular.module("assessment")
         // VARIABLES
         // ============================================================
 
-log
         // FUNCTIONS
         // ============================================================
 shopService.getProducts().then(function(response){
-    $scope.products = response.data;
     $scope.getProducts = response.data;
-console.log($scope.products)
+    $scope.id = response.data.id;
+console.log("$scope.products" , $scope.products)
+console.log("$scope.id" , $scope.id)
     })
     shopService.getProduct($stateParams.id).then(function(item) {
-        console.log(item);
-  $scope.item = item;
+    $scope.item = item;
+
+console.log(item);
 })
 });
-
-
-
- 

@@ -1,18 +1,21 @@
 
-angular.module('assessment').controller('productDetailsCtrl', function($scope, shopService, $stateParams) {
+angular.module('assessment')
+    .controller('productDetailsCtrl', function($scope, $stateParams, shopService) {
 
-$scope.product_id = $stateParams.id
+    $scope.product_id = $stateParams.id
 
-    shopService.getProduct().then( response => {
-        $scope.product = response.data;
-    })
-
-
+    $scope.getProduct = function(id) {
+        shopService.getProduct(id).then(function(response) {
+          $scope.product = response.data;
 
     // $scope.show = false;
 
-});
-console.log('====================================');
-console.log($scope.product);
-console.log('====================================');
+    console.log('====================================')
+    console.log("product_id" , $scope.product_id);
+    console.log("product" , $scope.product);
+    console.log('====================================')
+    
+  })
+}
 
+});
